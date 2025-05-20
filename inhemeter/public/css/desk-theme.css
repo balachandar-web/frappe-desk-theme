@@ -1,0 +1,263 @@
+/* Define color variables for easy customization */
+:root {
+    --primary-bg-color: #f7f7f7;
+    --secondary-bg-color: #e0e0e0;
+    --light-color: #a4e0a7;
+    --highlight-color: #72cf75;
+    /* Soft green for highlights */
+    --text-color: #333333;
+    --hover-text-color: #4b4b4b;
+    --navbar-bg-color: #f0f0f0;
+    --sidebar-bg-color: #ededed;
+    --btn-primary-bg-color: #7dd880;
+    --btn-primary-hover-bg-color: #7fd182;
+    --border-color: #d3d3d3;
+}
+
+#awesomplete_list_1 li:hover {
+    background-color: var(--light-color); 
+    color: black; 
+    cursor: pointer; 
+}
+
+/* Global reset for a cleaner layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 20px; */
+}
+
+/* Content box with shadow */
+.content {
+    background-color: #ffffff;
+    color: var(--text-color);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Headers and Titles */
+.widget-head,
+.title-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.flex .title-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    color: rgb(53, 53, 53);
+}
+
+/* Navbar styling */
+/* .navbar-brand img {
+    content: url('/assets/lattiv_erp/images/lattivlogo.png') !important;
+    transition: transform 0.2s linear;
+} */
+
+/* .navbar-brand img:hover {
+    animation: rotate 3s linear infinite;
+} */
+
+/* Define the flipBack animation */
+/* @keyframes rotate {
+    0% {
+        transform: scale(1.3) rotateY(0deg);
+    }
+    100% {
+        transform: scale(1.3) rotateY(360deg);
+    }
+} */
+
+.navbar {
+    background-color: var(--light-color);
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.navbar a {
+    color: var(--text-color);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--hover-text-color);
+}
+
+/* Sidebar styling */
+.layout-side-section {
+    background-color: var(--sidebar-bg-color);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-menu a {
+    display: block;
+    color: var(--text-color);
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.sidebar-menu a:hover {
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: var(--btn-primary-bg-color);
+    color: white;
+    /* border: none; */
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover-bg-color);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form input styling */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px;
+    color: var(--text-color);
+    font-size: 1em;
+    /* margin: 8px 0; */
+    width: 100%;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--highlight-color);
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 128, 0, 0.2);
+}
+.btn-checkout{
+    background-color: rgb(207, 62, 62);
+    color: white;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+table th {
+    background-color: var(--highlight-color);
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+table td {
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+table tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* Modal styling */
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.padding-10 {
+    padding: 10px;
+} 
