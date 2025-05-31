@@ -24,6 +24,16 @@ app_license = "mit"
 # Includes in <head>
 # ------------------
 
+fixtures = [
+    {
+        "doctype": "Property Setter",
+        "filters": [
+            ["name", "in", ["User-desk_theme-options"]]
+        ]
+    }
+]
+
+
 # include js, css files in header of desk.html
 app_include_css = "/assets/inhemeter/css/desk-theme.css"
 app_include_js = "/assets/inhemeter/js/desk-theme.js"
@@ -177,6 +187,9 @@ app_include_js = "/assets/inhemeter/js/desk-theme.js"
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "inhemeter.event.get_events"
 # }
+override_whitelisted_methods = {
+	"frappe.core.doctype.user.user.switch_theme": "inhemeter.inhemeter.desk.desk-theme.switch_theme"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
